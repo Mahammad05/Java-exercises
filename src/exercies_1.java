@@ -84,6 +84,10 @@ public class exercies_1 {
         }
     }
 
+    
+    // Get 2 numbers from the user and print the average of prime numbers between these two numbers.
+    
+
     /* Calculate the employee's new salary, including salary and increase percentage. */
     public static int salaryGrowth (int salary, int percentage) {
         int new_salary = salary + (salary * percentage) / 100;
