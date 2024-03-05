@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class exercies_1 {
 
+    private static Scanner scanner = new Scanner(System.in);
+
     /* Print the given number's positive divisiors */
     public static void positiveDivisors (int number) {
         System.out.println(number + "'s positive divisors are :");
@@ -60,7 +62,10 @@ public class exercies_1 {
     }
 
     /* Print the prime numbers between the 2 entered numbers */
-    public static void findPrimes (int number1, int number2) {
+    public static void findPrimes () {
+
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
 
         System.out.println("The prime numbers between " + number1 + " and " + number2 + " :");
 
@@ -86,7 +91,44 @@ public class exercies_1 {
 
     
     // Get 2 numbers from the user and print the average of prime numbers between these two numbers.
-    
+    public static void calcPrimeAvrg () {
+
+        System.out.print("Enter a first number : ");
+        int number1 = scanner.nextInt();
+
+        System.out.print("Enter a second number : ");
+        int number2 = scanner.nextInt();
+
+        int total = 0;
+        int say = 0;
+        double average;
+
+        if (number1 > number2) {
+            int i = number2;
+
+            for (; i <= number1; i++) {
+                if (isPrime(i)) {
+                    total += i;
+                    say++;
+                }
+            }
+        }
+        else {
+            int i = number1;
+
+            for (; i <= number2; i++) {
+                if (isPrime(i)) {
+                    total += i;
+                    say++;
+                }
+            }
+        }
+
+        average = (double) total / say;
+
+        System.out.println("The average of prime numbers between " + number1 + " and " + number2 + " : " + average);
+
+    }
 
     /* Calculate the employee's new salary, including salary and increase percentage. */
     public static int salaryGrowth (int salary, int percentage) {
@@ -157,9 +199,6 @@ public class exercies_1 {
 
     public static void main (String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        
         System.out.print("Enter a number : ");
         int number = scanner.nextInt();
 
@@ -191,13 +230,9 @@ public class exercies_1 {
 
         /* -------------------------------------------------------------- */
 
-        System.out.print("Enter a first number : ");
-        int first_number = scanner.nextInt();
-
-        System.out.print("Enter a second number : ");
-        int second_number = scanner.nextInt();
-
-        findPrimes(first_number, second_number);
+        findPrimes();
+        
+        calcPrimeAvrg();
 
         /* -------------------------------------------------------------- */
 
@@ -304,8 +339,6 @@ public class exercies_1 {
         }
 
         /* ------------------------------------------------------------------------------------------------ */
-
-        scanner.close();
 
     }
 }
