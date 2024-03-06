@@ -308,42 +308,42 @@ public class exercies_2 {
     
     public static void main(String[] args) {
 
-        // sumNumbers();
-        // printMaxValue();
-        // findNumber();
-        // printSortedArray();
-        // citiesList();
-        // printOddNumbersList();
-        // displayMirrorPrime();
-        // odds_and_evens();
-        // squareElements();
-        // fibonacci();
-        // happyNumber();
+        sumNumbers();
+        printMaxValue();
+        findNumber();
+        printSortedArray();
+        citiesList();
+        printOddNumbersList();
+        displayMirrorPrime();
+        odds_and_evens();
+        squareElements();
+        fibonacci();
+        happyNumber();
 
         /* ---------------------------------------------------------------------------------------------- */
 
         // If we order the first 6 prime numbers from smallest to largest, we see that the 6th is 13. 
         // Therefore, print the 10001th prime number on the screen.
 
-        // ArrayList<Integer> prime_numbers = new ArrayList<>();
-        // int n = 1;
-        // int index = -1;
+        ArrayList<Integer> prime_numbers = new ArrayList<>();
+        int n = 1;
+        int index = -1;
 
-        // while (true) {
+        while (true) {
 
-        //     if (isPrime(n)) {
-        //         prime_numbers.add(n);
-        //         index++;
-        //     }
+            if (isPrime(n)) {
+                prime_numbers.add(n);
+                index++;
+            }
 
-        //     if (index == 10001) {
-        //         break;
-        //     }
+            if (index == 10001) {
+                break;
+            }
 
-        //     n++;
+            n++;
 
-        // }
-        // System.out.println(index);
-        // System.out.println("10001st prime number : " + prime_numbers.get(index));
+        }
+        System.out.println(index);
+        System.out.println("10001st prime number : " + prime_numbers.get(index));
     }
 }
